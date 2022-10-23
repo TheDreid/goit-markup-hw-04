@@ -14,7 +14,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 p,
@@ -240,7 +240,7 @@ body {
 }
 
 .about-container {
-  display: flex;
+  box-sizing: border-box;
 }
 
 .visually-hidden {
@@ -282,28 +282,28 @@ body {
   background-image: url(../images/спрайти/antenna.svg);
   margin-bottom: 30px;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .icon-clock::before {
   background-image: url(../images/спрайти/clock.svg);
   margin-bottom: 30px;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .icon-diagram::before {
   background-image: url(../images/спрайти/diagram.svg);
   margin-bottom: 30px;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .icon-astronaut::before {
   background-image: url(../images/спрайти/astronaut.svg);
   margin-bottom: 30px;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+.about-list {
+  width: 1200px;
 }
 
 .about-item::before {
@@ -314,6 +314,11 @@ body {
   background-repeat: no-repeat;
   background-color: #f5f4fa;
   background-position: center;
+}
+
+.about-item {
+  box-sizing: border-box;
+  width: 270px;
 }
 
 /*------work-----*/
@@ -333,14 +338,20 @@ body {
 }
 
 .work-list {
+  margin: 0px;
   justify-content: center;
   display: flex;
   gap: 30px;
 }
 
+.work-list-item {
+  width: 370px;
+}
+
 /*------team------*/
 
-.team-social-item:hover {
+.team-social-item:hover,
+.team-social-item:focus {
   color: var(--white-text-color);
   background-color: var(--accent-color);
 }
@@ -525,8 +536,11 @@ body {
 /* -------footer-social----- */
 
 .footer-social {
-  margin-top: 12px;
-  margin-left: 70px;
+  display: flex;
+  padding-top: 12px;
+  padding-left: 70px;
+  align-items: baseline;
+  flex-direction: column;
 }
 
 .footer-social-title {
@@ -628,6 +642,7 @@ body {
 }
 
 .filter-item .filter-btn {
+  box-sizing: border-box;
   padding: 6px 22px;
   border-radius: 4px;
   font-family: inherit;
@@ -656,10 +671,13 @@ body {
   gap: 30px;
 }
 
-.progects-list-container {
+.projects-item {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .container-projects {
+  border-top: 0px;
   padding: 20px 24px;
   border: 1px solid rgba(238, 238, 238, 1);
 }
